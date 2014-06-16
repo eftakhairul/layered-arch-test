@@ -1,6 +1,6 @@
 <?php
 /**
- * Plivo Controller
+ * Voice Broadcast controller
  *
  *
  * @author: Eftakhairul Islam <eftakhairul@gmail.com>
@@ -44,6 +44,12 @@ class VoiceBroadcastController
         $this->form        = $form;
     }
 
+    /**
+     * Send voice message by voip service
+     *
+     * @param HttpRequest $request
+     * @return HttpResponse
+     */
     public function sendMessage(HttpRequest $request)
     {
         $content  = $this->form->getForm(). PHP_EOL;
@@ -51,9 +57,9 @@ class VoiceBroadcastController
         $content .= $this->voipService->broadcastVoiceMessage(). PHP_EOL;
 
         $response = new HttpResponse($content,
-                                      HttpResponse::HTTP_OK,
-                                      array('content-type' => 'text/html')
-                                      );
+                                     HttpResponse::HTTP_OK,
+                                     array('content-type' => 'text/html')
+                                    );
 
 
         $response->setCharset('UTF-8');
