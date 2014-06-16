@@ -55,6 +55,7 @@ class PlivoController
                                       array('content-type' => 'text/html')
                                       );
 
+        // TODO: use UTF-8 unicode
         $response->setCharset('ISO-8859-1');
         $response->prepare($request);
 
