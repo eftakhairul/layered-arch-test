@@ -10,7 +10,7 @@ namespace Voip\Services;
 
 
 
-class TwilioService  extends \Voip\Services\AbstractVoipBroadcastService
+class TwilioService  extends AbstractVoipBroadcastService
 {
 
 

@@ -9,7 +9,7 @@
 namespace Voip\Services;
 
 
-class PlivoService  extends \Voip\Services\AbstractVoipBroadcastService
+class PlivoService  extends AbstractVoipBroadcastService
 {
 
     /**
